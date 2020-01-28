@@ -17,7 +17,7 @@
 
 Similar to the challenge `Bank` in Real World CTF 2019 Quals ([Ref](https://ctftime.org/task/9225)), the server-side implements the Schnorr signature algorithm. The difference between these two implementations is the verifying function:
 
-```python=
+```python
 def cosi_verify(c, s, pk, m):
     if (not on_curve(pk)):
         print('Not on curve')
@@ -29,7 +29,7 @@ def cosi_verify(c, s, pk, m):
 ```
 The main logic of the server's code is:
 
-```python=
+```python
 # generate server's public-private key pair
 sk, pk = generate_keys()
 print('sk, pk =', sk, pk)
@@ -54,7 +54,7 @@ In the deposit method, `T` and `PK` are provided by us. The bug happens at line 
 
 Exploit:
 
-```python=
+```python
 G = ... # base point
 n = ... # order of the group
 p = ... # mod p

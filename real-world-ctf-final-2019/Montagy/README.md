@@ -23,7 +23,7 @@ In this challenge, our goal is to let the balance of the proxy contract become 0
 
 The code of the proxy contract is:
 
-```javascript=
+```javascript
 pragma solidity ^0.5.11;
 
 contract Montagy{
@@ -97,7 +97,7 @@ How about creating a new puzzle that calls `server.solve()` directly? To make th
 
 First, write a contract which simply calls `solve` to the proxy contract:
 
-```javascript=
+```javascript
 contract P3 {
     Montagy public server;
     constructor() public {
@@ -113,7 +113,7 @@ Compile this contract and get its deploy bytecode. Note that whatever we pad at 
 
 Here is a script for finding proper padding:
 
-```python=
+```python
 from z3 import *
 
 def find(last, target):
